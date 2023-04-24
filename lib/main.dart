@@ -79,10 +79,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         leading: IconButton(
           onPressed: () {
-            if (Platform.isAndroid) {
-              SystemNavigator.pop();
-            } else if (Platform.isIOS) {
-              exit(0);
+            if(Navigator.canPop(context)) {
+              Navigator.pop(context);
             }
           },
           icon: const Icon(Icons.arrow_back_ios),
