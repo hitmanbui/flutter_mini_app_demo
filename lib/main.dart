@@ -75,8 +75,8 @@ class _MyHomePageState extends State<MiniHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text("Mini App Demo Home Page"),
-        leading: const Icon(Icons.arrow_back_ios),
+        title: const Text("Mini App Demo Home Page"),
+        leading: const Icon(Icons.close),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
