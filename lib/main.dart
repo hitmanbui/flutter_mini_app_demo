@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-const platform = const MethodChannel("MY_CHANNEL");
-
 void main() {
   runApp(MyApp(onCLose: () {}));
 }
 
 openApp() async {
+  const platform = MethodChannel("MY_CHANNEL");
   await platform.invokeMethod("mycall");
 }
 
