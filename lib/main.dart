@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+MethodChannel? platform;
 void main() {
+  platform = const MethodChannel("MY_CHANNEL");
   runApp(MyApp(onCLose: () {}));
 }
 
 openApp() async {
-  const platform = MethodChannel("MY_CHANNEL");
-  await platform.invokeMethod("mycall");
+  await platform?.invokeMethod("mycall");
 }
 
 class MyApp extends StatelessWidget {
