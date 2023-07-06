@@ -9,15 +9,4 @@ import io.flutter.plugin.common.MethodChannel
 
 
 class MainActivity: FlutterActivity() {
-
-    override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
-        super.configureFlutterEngine(flutterEngine)
-        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "MY_CHANNEL").setMethodCallHandler { call, result ->
-            // Note: this method is invoked on the main thread.
-            if (call.method.equals("mycall")) {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-            }
-        }
-    }
 }
